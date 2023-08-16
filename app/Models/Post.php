@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+    
+    //保存用
+    protected $fillable = [
+    'title',
+    'body',
+    ];
+    
     public function getByLimit(int $limit_count = 10)
     {
     // updated_atで降順に並べたあと、limitで件数制限をかける
