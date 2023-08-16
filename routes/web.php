@@ -20,6 +20,7 @@ use App\Http\Controllers\PostController;
 });
 */
 
+
 //http://~/postsのURLが来たらPostControllerのindexを実行
 Route::get('/', [PostController::class, 'index']);
 
@@ -28,3 +29,5 @@ Route::get('/', [PostController::class, 'index']);
     return view('posts.index');
 });
 */
+
+Route::get('/posts/{post}', [PostController::class ,'show']);
